@@ -90,7 +90,7 @@ class MazeProblem:
         transitions = []
         for key in trans:
             resultingState = (state[0] + trans[key][0], state[1] + trans[key][1])
-            if self.maze[state[1]][state[0]] != "X":
+            if self.maze[resultingState[1]][resultingState[0]] != "X":
                 transitions.append((key, self.cost(state), resultingState))
         return transitions
 
