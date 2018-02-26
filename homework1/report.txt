@@ -1,0 +1,17 @@
+1. For the open list, I originally began with the python heapq, but after I began working with it, I realized I couldn't really utilize the rich comparison using this data structure, and that's when I decided to switch to the python Queue.PriorityQueue which was very simply in implementation and allowed for the use of rich comparison. For the closed list, I used a simple dictionary. In the end the closed list looked something like this {"(1,2)": 1, "(4,3)": 1}. I chose this data structure because it allowed for the quickest lookup which was all I really needed it for.
+
+2. The comparison was made using the following maze:
+XXXXXXXXXXXXXXXXXXXXXXXX
+XG.X................XXXX
+XX.X*XXXXXXXXXX.XXX...XX
+X..XXX.......XX.X.XXX.XX
+XX...XXXXXXX.XX.X.....XX
+X.X..X.....X.XXXXXX.XXXX
+X.XX.X.X.X.X.XX...X..XXX
+X....X.X.X.X.XX.X.XX.XXX
+XXXX...X.X......X....XXX
+XXXXXXXXXXXXXXXXXXXXXXXX
+
+So I went to do the comparison and I found that both algorithms (with closed lists on both) go through the same number of nodes to find the goal. I started trouble making and I realized that when I am printing the path to the goal, the frontier is completely empty in the A* implementation. I started trouble shooting, but I obviously don't have time to finish trouble shooting right now. I'm submitting as is, but I plan to work on it tomorrow to try to figure out what's wrong with my implementation.
+
+Because they have the same number of nodes passed through, apparently my implementation of A* was not effective whatsoever in mitigating computational costs.
